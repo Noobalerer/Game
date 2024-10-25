@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katamari Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Optional background color */
+        }
+        #startGame {
+            padding: 10px 20px;
+            font-family: 'Bubble-w10MZ', sans-serif; /* Use your custom font here */
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="startGame">Start Game</button>
+    <script>
+        document.getElementById('startGame').onclick = function() {
+            const width = 800; // Desired width of the game window
+            const height = 600; // Desired height of the game window
+            const left = (screen.width / 2) - (width / 2);
+            const top = (screen.height / 2) - (height / 2);
+            
+            window.open('game.html', 'GameWindow', `width=${width},height=${height},top=${top},left=${left}`);
+        };
+    </script>
+</body>
+</html>
